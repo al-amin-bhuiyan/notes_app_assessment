@@ -1,27 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'app_colors.dart';
 
 class AppTheme {
   AppTheme._();
-
-  static const Color _primaryColor = Colors.black;
-  static const Color _backgroundColor = Colors.white;
-  static const Color _surfaceColor = Colors.white;
-  static const Color _errorColor = Color(0xFFD32F2F);
-  static const Color _borderColor = Color(0xFFE0E0E0);
 
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
-        seedColor: _primaryColor,
-        primary: _primaryColor,
-        surface: _surfaceColor,
-        error: _errorColor,
+        seedColor: AppColors.primaryColor,
+        primary: AppColors.primaryColor,
+        surface: AppColors.surfaceColor,
+        error: AppColors.errorColor,
       ),
-      scaffoldBackgroundColor: _backgroundColor,
+      scaffoldBackgroundColor: AppColors.backgroundColor,
       appBarTheme: AppBarTheme(
-        backgroundColor: _surfaceColor,
+        backgroundColor: AppColors.surfaceColor,
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: false,
@@ -42,30 +37,30 @@ class AppTheme {
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: const BorderSide(color: _borderColor),
+          borderSide: const BorderSide(color: AppColors.borderColor),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: const BorderSide(color: _borderColor),
+          borderSide: const BorderSide(color: AppColors.borderColor),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: const BorderSide(color: _primaryColor, width: 1.5),
+          borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.5),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: const BorderSide(color: _errorColor),
+          borderSide: const BorderSide(color: AppColors.errorColor),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: const BorderSide(color: _errorColor, width: 1.5),
+          borderSide: const BorderSide(color: AppColors.errorColor, width: 1.5),
         ),
         labelStyle: TextStyle(color: Colors.black54, fontSize: 16.sp),
         hintStyle: TextStyle(color: Colors.black38, fontSize: 16.sp),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: _primaryColor,
+          backgroundColor: AppColors.primaryColor,
           foregroundColor: Colors.white,
           elevation: 0,
           minimumSize: Size(double.infinity, 56.h),
@@ -80,16 +75,16 @@ class AppTheme {
         ),
       ),
       cardTheme: CardThemeData(
-        color: _surfaceColor,
+        color: AppColors.surfaceColor,
         elevation: 0,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.r),
-          side: const BorderSide(color: _borderColor, width: 1),
+          side: const BorderSide(color: AppColors.borderColor, width: 1),
         ),
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        backgroundColor: _primaryColor,
+        backgroundColor: AppColors.primaryColor,
         foregroundColor: Colors.white,
         elevation: 2,
         shape: CircleBorder(),
