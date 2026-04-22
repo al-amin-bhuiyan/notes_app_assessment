@@ -9,4 +9,5 @@ class ApiConstants {
   static const String fieldTitle = 'title';
   static const String fieldDescription = 'description';
   static const String fieldCreatedAt = 'createdAt';
+  static const String fieldData ="data";
 }
