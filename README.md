@@ -77,15 +77,13 @@ flutter run
 
 ## 📸 Screenshots
 
-*(Replace the placeholders below with the actual project images provided)*
-
 | Splash Screen | Login Screen | Registration Screen |
 | :---: | :---: | :---: |
 | <img src="screenshots/splash.png" width="250"> | <img src="screenshots/login.png" width="250"> | <img src="screenshots/register.png" width="250"> |
 
 | My Notes Dashboard | Add New Note | Logout Dialog |
 | :---: | :---: | :---: |
-| <img src="screenshots/dashboard.png" width="250"> | <img src="screenshots/add_note.png" width="250"> | <img src="screenshots/logout.png" width="250"> |
+| <img src="screenshots/dashboard_note.png" width="250"> | <img src="screenshots/add_note.png" width="250"> | <img src="screenshots/logout.png" width="250"> |
 
 
 ---
