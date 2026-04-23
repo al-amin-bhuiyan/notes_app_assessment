@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
-import 'package:notes_app/core/constants/route_paths.dart';
-import 'package:notes_app/core/utils/app_fonts.dart';
-import 'package:notes_app/features/auth/presentation/controllers/auth_controller.dart';
-import 'package:notes_app/features/notes/domain/entities/note_entity.dart';
-import 'package:notes_app/features/notes/presentation/controllers/notes_controller.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/constants/route_paths.dart';
+import '../../../../core/utils/app_fonts.dart';
+import '../../../auth/presentation/controllers/auth_controller.dart';
+import '../../domain/entities/note_entity.dart';
+import '../controllers/notes_controller.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -28,7 +33,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Obx(() => _buildBody(notesController)),
+      body: Obx(() => _buildBody(context, notesController)),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => context.push(RoutePaths.addNote),
         icon: Icon(Icons.add, size: 24.w),
@@ -40,9 +45,14 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _buildBody(NotesController controller) {
+  Widget _buildBody(BuildContext context, NotesController controller) {
     if (controller.isLoading.value) {
-      return const Center(child: CircularProgressIndicator());
+      return Center(
+        child: LoadingAnimationWidget.threeArchedCircle(
+          color: Theme.of(context).primaryColor,
+          size: 48,
+        ),
+      );
     }
 
     if (controller.hasError.value) {
@@ -128,29 +138,18 @@ class HomePage extends StatelessWidget {
   }
 
   void _showLogoutDialog(BuildContext context, AuthController authController) {
-    showDialog(
+    AwesomeDialog(
       context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: const Text('Logout'),
-        content: const Text('Are you sure you want to logout?'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(dialogContext).pop(),
-            child: const Text('Cancel'),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.of(dialogContext).pop();
-              authController.logout(context);
-            },
-            child: const Text(
-              'Logout',
-              style: TextStyle(color: Colors.red),
-            ),
-          ),
-        ],
-      ),
-    );
+      dialogType: DialogType.question,
+      headerAnimationLoop: false,
+      title: 'Logout',
+      desc: 'Are you sure you want to logout?',
+      btnCancelOnPress: () {},
+      btnOkText: 'Logout',
+      btnOkOnPress: () {
+        authController.logout(context);
+      },
+    ).show();
   }
 }
 
@@ -178,15 +177,20 @@ class _NoteCard extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
             SizedBox(height: 6.h),
-            Text(
-              note.description,
-              style: AppFonts.bodyMedium.copyWith(
-                color: Colors.black87,
-                height: 1.4,
-                fontSize: 14.sp,
+            ConstrainedBox(
+              constraints: BoxConstraints(maxHeight: 72.h),
+              child: MarkdownBody(
+                data: note.description,
+                selectable: false,
+                styleSheet:
+                    MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
+                  p: AppFonts.bodyMedium.copyWith(
+                    color: Colors.black87,
+                    height: 1.4,
+                    fontSize: 14.sp,
+                  ),
+                ),
               ),
-              maxLines: 3,
-              overflow: TextOverflow.ellipsis,
             ),
             SizedBox(height: 16.h),
             Text(
