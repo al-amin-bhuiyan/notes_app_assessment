@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:notes_app/core/utils/app_fonts.dart';
-import 'package:notes_app/core/utils/app_text_field.dart';
-import 'package:notes_app/core/utils/validator.dart';
-import 'package:notes_app/features/notes/presentation/controllers/notes_controller.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
+
+import '../../../../core/utils/app_fonts.dart';
+import '../../../../core/utils/app_text_field.dart';
+import '../../../../core/utils/validator.dart';
+import '../controllers/notes_controller.dart';
 
 class AddNotePage extends StatelessWidget {
   const AddNotePage({super.key});
@@ -63,19 +65,15 @@ class AddNotePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 Obx(
-                      () => ElevatedButton(
+                  () => ElevatedButton(
                     onPressed: controller.isSaving.value
                         ? null
                         : () => controller.addNote(context),
                     child: controller.isSaving.value
-                        ? const SizedBox(
-                      height: 22,
-                      width: 22,
-                      child: CircularProgressIndicator(
-                        color: Colors.white,
-                        strokeWidth: 2.5,
-                      ),
-                    )
+                        ? LoadingAnimationWidget.threeArchedCircle(
+                            color: Colors.white,
+                            size: 22,
+                          )
                         : const Text('Save Note'),
                   ),
                 ),

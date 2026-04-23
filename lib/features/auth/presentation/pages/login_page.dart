@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-import 'package:notes_app/core/constants/route_paths.dart';
-import 'package:notes_app/core/utils/app_fonts.dart';
-import 'package:notes_app/core/utils/app_text_field.dart';
-import 'package:notes_app/core/utils/validator.dart';
-import 'package:notes_app/features/auth/presentation/controllers/auth_controller.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:notes_app_assessment/core/constants/route_paths.dart';
+import 'package:notes_app_assessment/core/utils/app_fonts.dart';
+import 'package:notes_app_assessment/core/utils/app_text_field.dart';
+import 'package:notes_app_assessment/core/utils/validator.dart';
+import 'package:notes_app_assessment/features/auth/presentation/controllers/auth_controller.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -36,7 +37,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 Obx(
-                      () => AppTextField(
+                  () => AppTextField(
                     controller: controller.passwordController,
                     label: 'Password',
                     hint: 'Enter your password',
@@ -55,19 +56,15 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 Obx(
-                      () => ElevatedButton(
+                  () => ElevatedButton(
                     onPressed: controller.isLoginLoading.value
                         ? null
                         : () => controller.login(context),
                     child: controller.isLoginLoading.value
-                        ? const SizedBox(
-                      height: 22,
-                      width: 22,
-                      child: CircularProgressIndicator(
-                        color: Colors.white,
-                        strokeWidth: 2.5,
-                      ),
-                    )
+                        ? LoadingAnimationWidget.threeArchedCircle(
+                            color: Colors.white,
+                            size: 22,
+                          )
                         : const Text('Sign In'),
                   ),
                 ),

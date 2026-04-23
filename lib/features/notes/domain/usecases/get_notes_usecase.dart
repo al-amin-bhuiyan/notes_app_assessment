@@ -1,5 +1,5 @@
-import 'package:notes_app/features/notes/domain/entities/note_entity.dart';
-import 'package:notes_app/features/notes/domain/repositories/notes_repository.dart';
+import 'package:notes_app_assessment/features/notes/domain/entities/note_entity.dart';
+import 'package:notes_app_assessment/features/notes/domain/repositories/notes_repository.dart';
 
 class GetNotesUseCase {
   final NotesRepository _repository;

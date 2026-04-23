@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:notes_app/core/errors/app_exception.dart';
+import 'package:notes_app_assessment/core/errors/app_exception.dart';
 
 class AuthService {
   final FirebaseAuth _firebaseAuth;

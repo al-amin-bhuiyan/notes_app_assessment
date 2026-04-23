@@ -1,14 +1,14 @@
 import 'package:get/get.dart';
-import 'package:notes_app/core/services/auth_service.dart';
-import 'package:notes_app/core/services/firestore_service.dart';
-import 'package:notes_app/features/auth/data/repositories/auth_repository_impl.dart';
-import 'package:notes_app/features/auth/presentation/controllers/auth_controller.dart';
-import 'package:notes_app/features/auth/domain/usecases/login_usecase.dart';
-import 'package:notes_app/features/auth/domain/usecases/register_usecase.dart';
-import 'package:notes_app/features/notes/data/repositories/notes_repository_impl.dart';
-import 'package:notes_app/features/notes/domain/usecases/add_note_usecase.dart';
-import 'package:notes_app/features/notes/domain/usecases/get_notes_usecase.dart';
-import 'package:notes_app/features/notes/presentation/controllers/notes_controller.dart';
+import 'package:notes_app_assessment/core/services/auth_service.dart';
+import 'package:notes_app_assessment/core/services/firestore_service.dart';
+import 'package:notes_app_assessment/features/auth/data/repositories/auth_repository_impl.dart';
+import 'package:notes_app_assessment/features/auth/presentation/controllers/auth_controller.dart';
+import 'package:notes_app_assessment/features/auth/domain/usecases/login_usecase.dart';
+import 'package:notes_app_assessment/features/auth/domain/usecases/register_usecase.dart';
+import 'package:notes_app_assessment/features/notes/data/repositories/notes_repository_impl.dart';
+import 'package:notes_app_assessment/features/notes/domain/usecases/add_note_usecase.dart';
+import 'package:notes_app_assessment/features/notes/domain/usecases/get_notes_usecase.dart';
+import 'package:notes_app_assessment/features/notes/presentation/controllers/notes_controller.dart';
 
 class NotesBinding extends Bindings {
   @override

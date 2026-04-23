@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/core/utils/app_fonts.dart';
+import 'package:notes_app_assessment/core/utils/app_fonts.dart';
 
 class AppTextField extends StatelessWidget {
   final TextEditingController controller;

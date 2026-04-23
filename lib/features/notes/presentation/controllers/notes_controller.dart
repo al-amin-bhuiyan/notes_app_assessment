@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:notes_app/core/errors/app_exception.dart';
-import 'package:notes_app/core/utils/toast_message.dart';
-import 'package:notes_app/features/notes/domain/entities/note_entity.dart';
-import 'package:notes_app/features/notes/domain/usecases/add_note_usecase.dart';
-import 'package:notes_app/features/notes/domain/usecases/get_notes_usecase.dart';
+import 'package:notes_app_assessment/core/errors/app_exception.dart';
+import 'package:notes_app_assessment/core/utils/toast_message.dart';
+import 'package:notes_app_assessment/features/notes/domain/entities/note_entity.dart';
+import 'package:notes_app_assessment/features/notes/domain/usecases/add_note_usecase.dart';
+import 'package:notes_app_assessment/features/notes/domain/usecases/get_notes_usecase.dart';
 
 class NotesController extends GetxController {
   final AddNoteUseCase _addNoteUseCase;

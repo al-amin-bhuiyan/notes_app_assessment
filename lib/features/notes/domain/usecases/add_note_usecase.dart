@@ -1,4 +1,4 @@
-import 'package:notes_app/features/notes/domain/repositories/notes_repository.dart';
+import 'package:notes_app_assessment/features/notes/domain/repositories/notes_repository.dart';
 
 class AddNoteUseCase {
   final NotesRepository _repository;

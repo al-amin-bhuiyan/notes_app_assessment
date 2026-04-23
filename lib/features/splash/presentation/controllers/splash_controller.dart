@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-import 'package:notes_app/core/constants/route_paths.dart';
-import 'package:notes_app/features/splash/domain/usecases/check_first_launch_usecase.dart';
+import 'package:notes_app_assessment/core/constants/route_paths.dart';
+import 'package:notes_app_assessment/features/splash/domain/usecases/check_first_launch_usecase.dart';
 
-import 'package:notes_app/app/router/app_router.dart';
+import 'package:notes_app_assessment/app/router/app_router.dart';
 
 class SplashController extends GetxController {
   final CheckFirstLaunchUseCase _checkFirstLaunchUseCase;

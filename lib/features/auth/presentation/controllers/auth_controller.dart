@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-import 'package:notes_app/core/constants/route_paths.dart';
-import 'package:notes_app/core/errors/app_exception.dart';
-import 'package:notes_app/core/utils/toast_message.dart';
-import 'package:notes_app/features/auth/data/repositories/auth_repository_impl.dart';
-import 'package:notes_app/features/auth/domain/usecases/login_usecase.dart';
-import 'package:notes_app/features/auth/domain/usecases/register_usecase.dart';
+import 'package:notes_app_assessment/core/constants/route_paths.dart';
+import 'package:notes_app_assessment/core/errors/app_exception.dart';
+import 'package:notes_app_assessment/core/utils/toast_message.dart';
+import 'package:notes_app_assessment/features/auth/data/repositories/auth_repository_impl.dart';
+import 'package:notes_app_assessment/features/auth/domain/usecases/login_usecase.dart';
+import 'package:notes_app_assessment/features/auth/domain/usecases/register_usecase.dart';
 
 class AuthController extends GetxController {
   final LoginUseCase _loginUseCase;

@@ -1,7 +1,7 @@
-import 'package:notes_app/core/services/auth_service.dart';
-import 'package:notes_app/features/auth/data/models/user_model.dart';
-import 'package:notes_app/features/auth/domain/entities/user_entity.dart';
-import 'package:notes_app/features/auth/domain/repositories/auth_repository.dart';
+import 'package:notes_app_assessment/core/services/auth_service.dart';
+import 'package:notes_app_assessment/features/auth/data/models/user_model.dart';
+import 'package:notes_app_assessment/features/auth/domain/entities/user_entity.dart';
+import 'package:notes_app_assessment/features/auth/domain/repositories/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final AuthService _authService;

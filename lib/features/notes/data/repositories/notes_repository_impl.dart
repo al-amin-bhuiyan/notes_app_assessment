@@ -1,10 +1,13 @@
+
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:notes_app/core/constants/api_constants.dart';
-import 'package:notes_app/core/services/auth_service.dart';
-import 'package:notes_app/core/services/firestore_service.dart';
-import 'package:notes_app/features/notes/data/models/note_model.dart';
-import 'package:notes_app/features/notes/domain/entities/note_entity.dart';
-import 'package:notes_app/features/notes/domain/repositories/notes_repository.dart';
+
+import '../../../../core/constants/api_constants.dart';
+import '../../../../core/services/auth_service.dart';
+import '../../../../core/services/firestore_service.dart';
+import '../../domain/entities/note_entity.dart';
+import '../../domain/repositories/notes_repository.dart';
+import '../models/note_model.dart';
 
 class NotesRepositoryImpl implements NotesRepository {
   final FirestoreService _firestoreService;

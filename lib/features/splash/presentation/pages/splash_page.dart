@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:notes_app/core/utils/app_fonts.dart';
-import 'package:notes_app/features/splash/presentation/controllers/splash_controller.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:notes_app_assessment/app/theme/app_colors.dart';
+import 'package:notes_app_assessment/core/utils/app_fonts.dart';
+import 'package:notes_app_assessment/features/splash/presentation/controllers/splash_controller.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -11,35 +13,36 @@ class SplashPage extends StatelessWidget {
     Get.find<SplashController>();
 
     return Scaffold(
-      backgroundColor: const Color(0xFF6750A4),
+      backgroundColor: AppColors.backgroundColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Icon(
-              Icons.note_alt_outlined,
+              Icons.edit_document,
               size: 80,
-              color: Colors.white,
+              color: AppColors.primaryColor,
             ),
             const SizedBox(height: 24),
             Text(
-              'Notes App',
+              'Notes.',
               style: AppFonts.headlineLarge.copyWith(
-                color: Colors.white,
-                fontSize: 32,
+                color: AppColors.primaryColor,
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 8),
             Text(
               'Capture your thoughts',
               style: AppFonts.bodyMedium.copyWith(
-                color: Colors.white70,
+                color: Colors.grey.shade600,
               ),
             ),
             const SizedBox(height: 48),
-            const CircularProgressIndicator(
-              color: Colors.white54,
-              strokeWidth: 2,
+            LoadingAnimationWidget.staggeredDotsWave(
+              color: AppColors.primaryColor,
+              size: 40,
             ),
           ],
         ),

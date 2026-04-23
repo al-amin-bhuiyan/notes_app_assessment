@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:notes_app/core/services/auth_service.dart';
-import 'package:notes_app/features/auth/data/repositories/auth_repository_impl.dart';
-import 'package:notes_app/features/auth/domain/usecases/login_usecase.dart';
-import 'package:notes_app/features/auth/domain/usecases/register_usecase.dart';
-import 'package:notes_app/features/auth/presentation/controllers/auth_controller.dart';
+import 'package:notes_app_assessment/core/services/auth_service.dart';
+import 'package:notes_app_assessment/features/auth/data/repositories/auth_repository_impl.dart';
+import 'package:notes_app_assessment/features/auth/domain/usecases/login_usecase.dart';
+import 'package:notes_app_assessment/features/auth/domain/usecases/register_usecase.dart';
+import 'package:notes_app_assessment/features/auth/presentation/controllers/auth_controller.dart';
 
 class AuthBinding extends Bindings {
   @override

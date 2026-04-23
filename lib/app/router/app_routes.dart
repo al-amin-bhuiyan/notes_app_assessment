@@ -1,13 +1,13 @@
 import 'package:go_router/go_router.dart';
-import 'package:notes_app/core/constants/route_paths.dart';
-import 'package:notes_app/features/auth/presentation/bindings/auth_binding.dart';
-import 'package:notes_app/features/auth/presentation/pages/login_page.dart';
-import 'package:notes_app/features/auth/presentation/pages/registration_page.dart';
-import 'package:notes_app/features/notes/presentation/bindings/notes_binding.dart';
-import 'package:notes_app/features/notes/presentation/pages/add_note_page.dart';
-import 'package:notes_app/features/notes/presentation/pages/home_page.dart';
-import 'package:notes_app/features/splash/presentation/bindings/splash_binding.dart';
-import 'package:notes_app/features/splash/presentation/pages/splash_page.dart';
+import 'package:notes_app_assessment/core/constants/route_paths.dart';
+import 'package:notes_app_assessment/features/auth/presentation/bindings/auth_binding.dart';
+import 'package:notes_app_assessment/features/auth/presentation/pages/login_page.dart';
+import 'package:notes_app_assessment/features/auth/presentation/pages/registration_page.dart';
+import 'package:notes_app_assessment/features/notes/presentation/bindings/notes_binding.dart';
+import 'package:notes_app_assessment/features/notes/presentation/pages/add_note_page.dart';
+import 'package:notes_app_assessment/features/notes/presentation/pages/home_page.dart';
+import 'package:notes_app_assessment/features/splash/presentation/bindings/splash_binding.dart';
+import 'package:notes_app_assessment/features/splash/presentation/pages/splash_page.dart';
 
 class AppRoutes {
   AppRoutes._();

@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:notes_app/core/services/user_session_service.dart';
-import 'package:notes_app/features/splash/data/repositories/splash_repository_impl.dart';
-import 'package:notes_app/features/splash/domain/usecases/check_first_launch_usecase.dart';
-import 'package:notes_app/features/splash/presentation/controllers/splash_controller.dart';
+import 'package:notes_app_assessment/core/services/user_session_service.dart';
+import 'package:notes_app_assessment/features/splash/data/repositories/splash_repository_impl.dart';
+import 'package:notes_app_assessment/features/splash/domain/usecases/check_first_launch_usecase.dart';
+import 'package:notes_app_assessment/features/splash/presentation/controllers/splash_controller.dart';
 
 class SplashBinding extends Bindings {
   @override

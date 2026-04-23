@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:notes_app/features/notes/domain/entities/note_entity.dart';
+import 'package:notes_app_assessment/features/notes/domain/entities/note_entity.dart';
 
 class NoteModel extends NoteEntity {
   const NoteModel({

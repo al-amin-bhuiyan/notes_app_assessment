@@ -1,4 +1,4 @@
-import 'package:notes_app/features/splash/domain/repositories/splash_repository.dart';
+import 'package:notes_app_assessment/features/splash/domain/repositories/splash_repository.dart';
 
 class CheckFirstLaunchUseCase {
   final SplashRepository _repository;
