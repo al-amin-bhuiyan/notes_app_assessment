@@ -1,5 +1,3 @@
-
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../../../../core/constants/api_constants.dart';
@@ -19,7 +17,7 @@ class NotesRepositoryImpl implements NotesRepository {
   })  : _firestoreService = firestoreService,
         _authService = authService;
 
-  String get _currentUserId => _authService.currentUser!.uid;
+  String get _currentUserId => _authService.currentUser?.uid ?? '';
 
   @override
   Future<void> addNote({

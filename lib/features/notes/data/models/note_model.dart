@@ -11,7 +11,7 @@ class NoteModel extends NoteEntity {
   });
 
   factory NoteModel.fromFirestore(DocumentSnapshot<Map<String, dynamic>> doc) {
-    final data = doc.data()!;
+    final data = doc.data() ?? {};
     return NoteModel(
       id: doc.id,
       userId: data['userId'] as String? ?? '',
