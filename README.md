@@ -85,6 +85,10 @@ flutter run
 | :---: | :---: | :---: |
 | <img src="screenshots/dashboard_note.png" width="250"> | <img src="screenshots/add_note.png" width="250"> | <img src="screenshots/logout.png" width="250"> |
 
+| Firebase Authentication | Firestore Database |
+| :---: | :---: |
+| <img src="screenshots/authentication_image.png" width="375"> | <img src="screenshots/firestore_database_image.png" width="375"> |
+
 
 ---
 
