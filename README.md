@@ -12,7 +12,7 @@ A clean, professional, assessment-ready Flutter application that lets users capt
 - **Logout flow**: Secure logout functionality to kill user sessions seamlessly.
 - **Minimalist & Professional UI/UX**: Uses a unified black & white "minimalist ink" design theme tailored for clarity. Contains clean spacing, dynamic loading states, intuitive toasters, and highly legible fonts.
 
-## 🏗 Architecture
+ Architecture
 
 This project strictly adheres to **Clean Architecture** patterns alongside robust **OOP paradigms**.
 
@@ -31,7 +31,7 @@ lib/
  ┗ main.dart    # Application Entry
 ```
 
-## 📦 Packages Used
+ Packages Used
 
 - **`firebase_core`, `firebase_auth`, `cloud_firestore`**: For authentication and secure, real-time database management.
 - **`get`**: For powerful Dependency Injection and State Management.
@@ -64,7 +64,7 @@ service cloud.firestore {
 }
 ```
 
-### 3. Running the Project Locally
+ Running the Project Locally
 ```bash
 # Clone this repository locally. 
 
